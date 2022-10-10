@@ -60,6 +60,7 @@ a{
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    margin-right: 50px;
 }
 
 .logo img{
@@ -118,10 +119,23 @@ a{
 .header__promo{
     flex-grow: 1;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 75px;
+}
+
+.header__promo-container{
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding-bottom: 75px;
+}
+
+.header__promo-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 590px;
+    margin-right: 50px;
 }
 
 .header__promo-desc h1{
@@ -140,11 +154,74 @@ a{
     color: #ffffff;
 }
 
+.header__promo-desc-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.header__promo-desc-btn{
+    padding: 20px 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+.header__promo-buy-btn{
+    font-family: "Roboto Regular";
+    color: #ffffff;
+    background-color: #061e37;
+}
+
+.header__promo-try-btn {
+    font-family: "Raleway Bold";
+    color: #061e37;
+    background-color: #ffffff;
+}
+
 .header__promo-video{
-    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header__promo-video video{
+    box-sizing: content-box;
     width: 600px;
-    height: 320px;    
+    height: 320px;
+    border-radius: 5px;
+    border: 1px solid #061e37;
+}
+
+.header__promo-video-play-btn-container{
+    position: absolute;
+}
+
+.header__promo-video-play-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    background-color: transparent;
+    font-family: "Raleway Bold";
+    font-size: 12px;
+    color: #061e37;
+    text-transform: uppercase;
+}
+
+.header__promo-video-play-btn img{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+@media (min-width: 1000px) and (max-width: 1980px){
+    
 }
