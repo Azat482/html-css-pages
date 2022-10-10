@@ -3,13 +3,148 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-
-li{
+}   
+    
+li{ 
     list-style: none;
-}
-
-a{
+}   
+    
+a{  
     text-decoration: none;
+    color: inherit;
 }
 
+.content{
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*header*/
+.header {
+    display: flex;
+    flex-direction: column;
+    background-image: url("./images/header_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 750px;
+}
+
+.header-overlay{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: linear-gradient(143deg, rgba(0, 184, 212, 0.9), rgba(29, 233, 182 , 0.9));
+}
+
+.header-container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/*header top*/
+.header__top{
+    height: 132px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    width: 30px;
+    height: 30px;
+}
+
+.logo__text{
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.logo__text-1{
+    font-family: "Raleway Regular";
+}
+
+.logo__text-2{
+    font-family: "Raleway Extra Bold";
+}
+
+.header__top-nav{
+   flex-grow: 2;
+   flex-basis: 0;
+}
+
+.header__top-nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    font-family: "Raleway SemiBold";
+    color: #ffffff;
+}
+
+.header__top-nav-links a:hover{
+    color: #061e37;
+}
+
+.header__top-sigup-btn-container{
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: end;
+}
+
+.header__top-signup-btn{
+    font-family: "Raleway Regular";
+    font-size: 12px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    padding: 5px 18px;
+}
+
+/*header promo*/
+.header__promo{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 75px;
+}
+
+.header__promo-desc h1{
+    font-family: "Raleway Extra Bold";
+    font-size: 55px;
+    line-height: 65px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+
+.header__promo-desc p{
+    font-family: "Raleway Regular";
+    font-size: 18px;
+    line-height: 35px;
+    color: #ffffff;
+}
+
+.header__promo-video{
+    
+}
+
+.header__promo-video video{
+    width: 600px;
+    height: 320px;    
+}
