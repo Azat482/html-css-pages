@@ -49,29 +49,30 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    max-width: 570px;
+    max-width: 770px;
     text-align: center;
     padding-top: 100px;
+    padding-bottom: 15px;
 }
 
 .block-2__easy-useful-header > h2{
     font-family: "Relaway SemiBold";
-    font-size: 45px;
+    font-size: 60px;
     color: #061e37;
     margin-bottom: 10px;
 }
 
 .block-2__easy-useful-header > h3{
     font-family: "Relaway SemiBold";
-    font-size: 25px;
+    font-size: 40px;
     color: #b0bec5;
     margin-bottom: 15px;
 }
 
 .block-2__easy-useful-header > p{
     font-family: "Raleway Regular";
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 30px;
+    line-height: 40px;
     color: #b0bec5;
 }
 
@@ -80,7 +81,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 350px;
+    max-width: 450px;
+    padding: 0 20px;
 }
 
 .block-2__easy-useful-item > img{
@@ -91,16 +93,16 @@
 
 .block-2__easy-useful-item > h4{
     font-family: "Ralway SemiBold";
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 35px;
+    line-height: 40px;
     color: #061e37;
     margin-bottom: 15px;
 }
 
 .block-2__easy-useful-item > p{
     font-family: "Raleway Regular";
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 30px;
+    line-height: 35px;
     color: #78909c;
 }
 
@@ -111,7 +113,7 @@
 
 button.block-2__easy-useful-btn{
     font-family: "Raleway Bold";
-    font-size: 15px;
+    font-size: 30px;
     color: #ffffff;
     background-color: #1de9b6;
     border: none;
@@ -197,7 +199,7 @@ button.block-2__easy-useful-btn{
 }
 
 @media (min-width: 1400px){
-
+    
 }
 
 @media (max-width: 575.98px) {
@@ -421,6 +423,62 @@ button.block-2__easy-useful-btn{
         margin-left: 15px;
         font-size: 15px;
     }
+
+    .block-2__easy-useful-header{
+        max-width: 60%;
+    }
+
+    .block-2__easy-useful-header > h2{
+        font-family: "Relaway SemiBold";
+        font-size: 45px;
+        color: #061e37;
+        margin-bottom: 10px;
+    }
+    
+    .block-2__easy-useful-header > h3{
+        font-family: "Relaway SemiBold";
+        font-size: 25px;
+        color: #b0bec5;
+        margin-bottom: 15px;
+    }
+    
+    .block-2__easy-useful-header > p{
+        font-family: "Raleway Regular";
+        font-size: 15px;
+        line-height: 25px;
+        color: #b0bec5;
+    }
+    
+    .block-2__easy-useful-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 350px;
+        padding: 0 20px;
+    }
+
+    
+    .block-2__easy-useful-item > h4{
+        font-family: "Ralway SemiBold";
+        font-size: 20px;
+        line-height: 25px;
+        color: #061e37;
+        margin-bottom: 15px;
+    }
+    
+    .block-2__easy-useful-item > p{
+        font-family: "Raleway Regular";
+        font-size: 15px;
+        line-height: 20px;
+        color: #78909c;
+    }
+
+    button.block-2__easy-useful-btn{
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px){
@@ -430,6 +488,61 @@ button.block-2__easy-useful-btn{
 
     .block-2__counts-container{
         grid-template-rows: 100px;
+    }
+
+    .block-2__easy-useful-header{
+        max-width: 60%;
+    }
+
+    .block-2__easy-useful-header > h2{
+        font-family: "Relaway SemiBold";
+        font-size: 45px;
+        color: #061e37;
+        margin-bottom: 10px;
+    }
+    
+    .block-2__easy-useful-header > h3{
+        font-family: "Relaway SemiBold";
+        font-size: 25px;
+        color: #b0bec5;
+        margin-bottom: 15px;
+    }
+    
+    .block-2__easy-useful-header > p{
+        font-family: "Raleway Regular";
+        font-size: 15px;
+        line-height: 25px;
+        color: #b0bec5;
+    }
+    
+    .block-2__easy-useful-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 350px;
+        padding: 0 20px;
+    }
+
+    
+    .block-2__easy-useful-item > h4{
+        font-family: "Ralway SemiBold";
+        font-size: 20px;
+        line-height: 25px;
+        color: #061e37;
+        margin-bottom: 15px;
+    }
+    
+    .block-2__easy-useful-item > p{
+        font-family: "Raleway Regular";
+        font-size: 15px;
+        line-height: 20px;
+        color: #78909c;
+    }
+
+    button.block-2__easy-useful-btn{
+        font-size: 15px;
+        margin-bottom: 25px;
     }
 }
 
