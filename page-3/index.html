@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="./block-3.css">
         <link rel="stylesheet" href="./block-4.css">
         <link rel="stylesheet" href="./block-5.css">
+        <link rel="stylesheet" href="./block-6.css">
+        <link rel="stylesheet" href="./footer.css">
     </head>
     <body>
         <header class="header">
@@ -425,13 +427,13 @@
                         <div class="block-5__slider-img-elemns-box">
                             <div class="block-5__slider-img-elems-track">
                                 <div class="block-5__slider-img-box">
-                                    <img src="./images/block-5-slider/person-1-img.jpg" alt="img" width="160px" height="160px">
+                                    <img src="./images/block-5-person-3.png" alt="img" width="160px" height="160px">
                                 </div>
                                 <div class="block-5__slider-img-box">
-                                    <img src="./images/block-5-slider/person-2-img.jpg" alt="img" width="160px" height="160px">
+                                    <img src="./images/block-5-person-main.png" alt="img" width="160px" height="160px">
                                 </div>
                                 <div class="block-5__slider-img-box">
-                                    <img src="./images/block-5-slider/person-3-img.jpg" alt="img" width="160px" height="160px">
+                                    <img src="./images/block-5-person-2.png" alt="img" width="160px" height="160px">
                                 </div>
                                 <div class="block-5__slider-img-box">
                                     <img src="./images/block-5-slider/person-4-img.jpg" alt="img" width="160px" height="160px">
@@ -534,10 +536,75 @@
                     </div>
                 </div>
             </section>
-            <section></section>            
+            <section class="block-6">
+                <div class="block-6-container content">
+                    <div class="block-6__header-container">
+                        <h2>Contact Us</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, 
+                            consectetur adipisicing elit, 
+                            sed do eiusmod tempor incididunt 
+                            ut labore et dolore magna
+                        </p>
+                    </div>
+                    <div class="block-6__form-container">
+                        <form action="/" method="GET">
+                            <input class="first-name simple-inp" type="text" name="user-first-name" placeholder="First Name">
+                            <input class="last-name simple-inp" type="text" name="user-last-name" placeholder="Last Name">
+                            <input class="email simple-inp" type="email" name="user-email" placeholder="Email">
+                            <input class="number simple-inp" type="tel" name="user-phone-number" placeholder="Phone">
+                            <textarea class="user-message" name="user-message" placeholder="Message"></textarea>
+                            <label class="subscribe-chbox-lbl" for="user-subscribe-chbox">
+                                <input class="subscribe-chbox" type="checkbox" name="user-subscribe-chbox" >
+                                <span>subscribe to the newsletter</span>
+                            </label>
+                            <button class="send-button simple-inp" type="submit">
+                                <span>SEND</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>            
         </main>
         <footer class="footer">
-
+            <div class="footer-container content">
+                <div class="footer__top-container">
+                    <div class="footer__logo">
+                        <img src="./images/header-logo.svg" alt="logo" width="30px" height="30px">
+                        <div class="footer__logo-text-block">
+                            <p class="footer__logo-text-1">DART</p> 
+                            <p class="footer__logo-text-2">SERVICE MANAGER</p>
+                        </div>
+                    </div>
+                    <nav class="footer__top-links">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/">Service</a></li>
+                            <li><a href="/">Extension</a></li>
+                            <li><a href="/">Pricing</a></li>
+                            <li><a href="/">Help</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__bottom-container">
+                    <nav class="footer__bottom-add-inf">
+                        <ul>
+                            <li><a href="/">Privecy Policy</a></li>
+                            <span></span>
+                            <li><a href="/">About Us</a></li>
+                            <span></span>
+                            <li><a href="/">About Us</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer__bottom-network-links">
+                        <img src="./images/footer-soc-net/behance.svg" alt="soc-net" width="22px" height="22px">
+                        <img src="./images/footer-soc-net/dribbble.svg" alt="soc-net" width="22px" height="22px">
+                        <img src="./images/footer-soc-net/linkedin.svg" alt="soc-net" width="22px" height="22px">
+                        <img src="./images/footer-soc-net/telegram.svg" alt="soc-net" width="22px" height="22px">
+                        <img src="./images/footer-soc-net/twitter.svg" alt="soc-net" width="22px" height="22px">
+                    </div>
+                </div>
+            </div>
         </footer>
         <script defer src="./scripts.js" ></script>
     </body> 
