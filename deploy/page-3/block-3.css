@@ -1,0 +1,255 @@
+.block-3{
+    min-height: 870px;
+}
+
+.block-3-container{
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    gap: 45px;
+    padding-top: 95px;
+    padding-bottom: 95px;
+}
+
+.block-3__header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    text-align: center;
+}
+
+.block-3__header > h2{
+    font-family: "Raleway Semibold";
+    font-size: 70px;
+    color: #061e37;
+    margin-bottom: 20px;
+}
+
+.block-3__header > p{
+    font-family: "Raleway Regular";
+    font-size: 25px;
+    line-height: 35px;
+    color: #b0bec5;
+}
+
+.block-3__accordion-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 60%;
+}
+
+.block-3__accordion-item-container{
+    width: 100%;
+}
+
+.block-3__accordion-item-container > *{
+    width: 100%;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+
+.block-3__accordion-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 1px 5px 0 #0000003c;
+    padding: 20px 25px;
+
+}
+
+.block-3__accordion-btn.accordion__btn-active{
+    padding: 25px;
+    gap: 25px;
+}
+
+
+
+.block-3__accordion-btn-elem{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.block-3__accordion-btn-elem > img{
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+}
+
+.block-3__accordion-btn-elem > span{
+    font-family: "Raleway Bold";
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.block-3__accordion-btn-elem > .accordion-arrow{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.block-3__accordion-btn-elem > .accordion-arrow img{
+    width: 25px;
+    height: 25px;
+}
+
+.block-3__accordion-panel{
+    display: flex;
+    flex-direction: row;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    gap: 25px;
+}
+
+.block-3__accordion-panel > img{
+    width: 250px;
+    height: 155px;
+    border-radius: 5px;
+    border: none;
+}
+
+.block-3__accordion-panel-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: "Raleway Regular";
+    font-size: 15px;
+    line-height: 25px;
+    text-align: start;
+    width: 100%;
+}
+
+.block-3__accordion-panel-text p{
+    margin-bottom: 25px;
+}
+
+
+
+
+/*adaptive*/
+@media (min-width: 576px){
+    
+}
+
+@media (min-width: 768px){
+
+}
+
+@media (min-width: 992px){
+   
+}
+
+@media (min-width: 1200px){
+
+}
+
+@media (min-width: 1400px){
+
+}
+
+@media (max-width: 575.98px) {
+    .block-3__accordion-panel-text{
+        font-size: 12.5px;
+        line-height: 22.5px;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+}
+
+@media (max-width: 991.98px) {
+    .block-3__accordion-panel{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .block-3__accordion-panel > img{
+        width: 100%;
+        height: auto;
+        align-self: center;
+    }
+    
+    
+    .block-3__accordion-panel-text p{
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 1399.98px) {
+    .block-3__header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 55%;
+        text-align: center;
+    }
+    
+    .block-3__header > h2{
+        font-family: "Raleway Semibold";
+        font-size: 45px;
+        color: #061e37;
+        margin-bottom: 20px;
+    }
+    
+    .block-3__header > p{
+        font-family: "Raleway Regular";
+        font-size: 15px;
+        line-height: 25px;
+        color: #b0bec5;
+    }
+
+    .block-3__accordion-container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 80%;
+    }
+}
+
+
+
+@media (min-width: 576px) and (max-width: 767.98px){
+    
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    .block-3__accordion-panel-text{
+        font-size: 17.5px;
+        line-height: 27.5px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+    .block-3__accordion-panel-text{
+        font-size: 12.5px;
+        line-height: 17.5px;
+    }    
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px){
+   
+}
+
+@media (min-width: 1400px){
+    
+}
+

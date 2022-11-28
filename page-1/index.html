@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>Simple landing</title>
-        <link rel="stylesheet" href="fonts.css">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="fonts.css"/>
+        <link rel="stylesheet" href="styles.css"/>
     </head>
     <body>
-        <header class="main-container">
-            <div class="header-top">
+        <header class="header">
+            <div class="header-top content-container">
                 <div id="logo">
                     <span id="logo-main"><span class="first-symbol">I</span>MPRESSIONIST</span>  
                     <span id="logo-litte-info">Free PSD Website Template</span>
                 </div>
                 <div class="wrapper-header-nav">
-                    <nav>
+                    <nav class="header-top-nav">
                         <ul class="header-nav-items">
                             <li>
                                 <a href="/">
@@ -48,33 +49,40 @@
                             </li>
                         </ul>
                     </nav>
+                    <div class="header__top-hamburger-btn-container">
+                        <button class="header__top-hamburger-btn">
+                            <span class="header__top-hamburger-btn-line"></span>
+                        </button>
+                    </div>
                 </div>    
             </div>
         </header>
         <div class="general-container">
             <main class="main-container" role="main">
-                <div class="box-poster">
-                    <div class="poster-text-info">
-                        <span class="poster-text-info-title">
-                            A HUGE 
-                            TITLE HERE 
-                        </span>
-                        <p class="poster-text-info-main-text">
-                            Cursuspenatisaccum ut curabitur nulla tellus tor  
-                            ames a in curabitur pede. Idet mollisi eros dis   
-                            orci congue elis et curabitur consequam intesque. 
-                            Curabiturpisametur in ante.                       
-                        </p>
-                        <div class="poster-text-info-button-box">
-                            <a class="poster-text-info-button" href="/">READ MORE »</a>
+                <section class="box-poster">
+                    <div class="box-poster-content content-container">
+                        <div class="poster-text-info">
+                            <span class="poster-text-info-title">
+                                A HUGE 
+                                TITLE HERE 
+                            </span>
+                            <p class="poster-text-info-main-text">
+                                Cursuspenatisaccum ut curabitur nulla tellus tor  
+                                ames a in curabitur pede. Idet mollisi eros dis   
+                                orci congue elis et curabitur consequam intesque. 
+                                Curabiturpisametur in ante.                       
+                            </p>
+                            <div class="poster-text-info-button-box">
+                                <a class="poster-text-info-button" href="/">READ MORE »</a>
+                            </div>
                         </div>
+                        <div class="poster-image">
+                            <img src="./images/Element.png" alt="displays">
+                        </div>    
                     </div>
-                    <div class="poster-image">
-                        <img src="./images/Element.png" alt="displays">
-                    </div>
-                </div>
+                </section>
                 <section class="wrapper-articles-box">
-                    <div class="articles-container">
+                    <div class="articles-container  content-container">
                         <div class="article-box-item">
                             <div class="article-title-box">
                                 <span class="article-title-text">
@@ -138,7 +146,7 @@
                     </div>
                 </section>
                 <section class="wrapper-content-box">
-                    <div class="container-content">
+                    <div class="titles-content-container content-container">
                         <div class="content-item-box">
                             <div class="content-item-title-box">
                                 <span class="content-title-text">YOUR <span class="content-title-text-red">TITLE HERE</span></span>
@@ -172,23 +180,25 @@
                 </section>
             </main>
             <footer class="main-container">
-                <div class="wrapper-footer-items">
+                <div class="wrapper-footer-items content-container">
                     <section class="footer-item about-company">
                         <div class="footer-section-caption">
                             <span>ABOUT US</span>
                         </div>
                         <img src="./images/footer-about-image.png" alt="about us image">
-                        <p class="about-company-text">
-                            Lorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. 
-                            Nunc non diam erat. In 
-                            fringilla massa ut nisi 
-                            ullamcorper pellentesque. 
-                            Quisque non luctus sem. Nullam 
-                            non magna vel nisi posuere 
-                            bibendum vitae sed dui.
-                        </p>
-                        <a href="/" class="footer-readmore-button">Read More »</a>
+                        <div class="about-company-info-box">
+                            <p class="about-company-text">
+                                Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit. 
+                                Nunc non diam erat. In 
+                                fringilla massa ut nisi 
+                                ullamcorper pellentesque. 
+                                Quisque non luctus sem. Nullam 
+                                non magna vel nisi posuere 
+                                bibendum vitae sed dui.
+                            </p>
+                            <a href="/" class="footer-readmore-button">Read More »</a>    
+                        </div>
                     </section>
                     <section class="footer-item some-quick-links">  
                         <div class="footer-section-caption">
@@ -249,10 +259,11 @@
                         </form>
                     </section>
                 </div>
-                <div class="footer-info">
+                <div class="footer-info content-container">
                     <span class="footer-info-text">Copyright © 2013 Domain Name - All Rights Reserved</span>
                 </div>
             </footer>
         </div>
+        <script defer src="./scripts.js"></script>
     </body>
 </html>

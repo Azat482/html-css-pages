@@ -1,5 +1,6 @@
 (function() {
     "use strict";
+    
 
     //hamburger menu
     var toggle = document.querySelector(".header__top-hamburger-btn");
@@ -13,7 +14,8 @@
     });
     }
 
-    //accordion panel
+
+  //accordion panel
   var accordion_elements = Object.values(document.getElementsByClassName("block-3__accordion-btn"));
   accordion_elements.forEach(accordion_element => {
     accordion_element.addEventListener('click', function (e) {
@@ -42,7 +44,7 @@
     let block_4_slide_position_index = 0;
     const block_4_show_slide_items = 2;
     const block_4_slider_item_height = block_4_slider_item.clientHeight;
-    //const block_4_slider_track_gap = (document.querySelector('.block-4__slider-items-box-container').clientHeight - 30) * 0.18;
+    //const block_4_slider_track_gap = (document.querySelector('.block-4__slider-items-box-container').clientHeight - 30) * 0.18;Ф
     const block_4_slider_track_gap = Number((getComputedStyle(block_4_slider_track).gap).replace('px','')); //getting flex-gap property from element
     const block_4_slider_track_shift = block_4_slider_item_height + block_4_slider_track_gap; 
 
