@@ -11,14 +11,18 @@ body {
     align-items: center;
 }
 
+main.main {
+    width: 100%;
+}
+
 /*1440*/
 /*110*/
 /*130*/
 
 .content-prop {
-    width: 1440px;
+    max-width: 1440px;
     padding-left: 110px;
-    padding-right: 130px;
+    padding-right: 115px;
     margin: 0 auto;
 }
 
@@ -28,7 +32,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 820px;
+    max-height: 820px;
     background-color: #f1f1f1;
 }
 
@@ -40,7 +44,7 @@ body {
 .header-top__content nav {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
     width: 100%;
@@ -58,7 +62,6 @@ body {
     width: 135px;
     text-decoration: none;
     font-size: 20.83px;
-
 }
 
 .header-top-links__home-link {
@@ -100,7 +103,8 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
     padding-top: 25px;
     padding-bottom: 160px;
 }
@@ -109,22 +113,21 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
-    width: 535px;
-    padding-right: 105px;
+    align-items: flex-start;
+    width: 435px;
 }
 
 .header-poster__info h1 {
     font-family: 'Cardo Bold';
     color: #232323;
-    font-size: 81.48px;
-    line-height: 81.48px;
+    font-size: 81px;
+    line-height: 81px;
     padding-bottom: 10px;
 }
 
 .header-poster__info p {
     font-family: 'Lato Regular';
-    font-size: 16.67px;
+    font-size: 16px;
     padding-bottom: 40px;
 }
 
@@ -148,31 +151,39 @@ body {
     justify-content: flex-end;
 }
 
+.header-poster__imagebox > img {
+    width: 662px;
+    height: 419px;
+}
+
 
 /*Travel logs*/
-.container-travel-logs {
+.travel-logs__container {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 385px;
+    align-items: stretch;
+    max-height: 385px;
     background-color: #232323;
     background-image: url('./images/Scribble\ Light-travel-logs.png'), url('./images/Scribble\ Light-travel-logs-2.png');
     background-repeat: no-repeat;
     background-position: left -75px top 50px, right -25px bottom 50px;
 }
 
-.travel-logs-content {
+.travel-logs__content {
+    box-sizing: content-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 100%;
     width: 440px;
-    padding: 50px 0 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
     color: #e9e7e7;
 }
 
-.travel-logs-content h2 {
+.travel-logs__content h2 {
     font-family: 'Cardo Bold';
     font-size: 55.46px;
     line-height: 55.46px;
@@ -180,7 +191,7 @@ body {
     margin-bottom: 20px;
 }
 
-.travel-logs-content p {
+.travel-logs__content p {
     font-family: 'Lato Regular';
     font-size: 15px;
     text-align: center;
@@ -214,10 +225,13 @@ body {
 .group-2-items__content {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    height: 820px;
-    padding: 0 118px 0 118px;
+    justify-content: center;
+    min-height: 820px;
+    gap: 60px;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 .group-2-item {
@@ -254,14 +268,14 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
-    height: 1740px;
+    min-height: 1740px;
     background-color: #f1f1f1;
     background-image: url('./images/Scribble\ Dark-group-3.png'), url(./images/Scribble\ Lightest-group-3.png);
     background-repeat: no-repeat;
     background-position: left 130px top 670px, right top 50px;
 }
 
-.group-3-title-container {
+.group-3-title__container {
     flex-grow: 1;
     flex-basis: 0;
     display: flex;
@@ -270,8 +284,7 @@ body {
     align-items: center;
 }
 
-.group-3-title-content {
-    width: 790px;
+.group-3-title__content {
     height: 430px;
     display: flex;
     flex-direction: column;
@@ -283,7 +296,8 @@ body {
     padding-top: 135px;
 }
 
-.group-3-title-content h2 {
+.group-3-title__content h2 {
+    max-width: 790px;
     font-family: 'Cardo Bold';
     font-size: 97.7px;
     line-height: 97.7px;
@@ -292,33 +306,35 @@ body {
     margin-bottom: 50px;
 }
 
-.group-3-title-content ul {
+.group-3-title__content ul {
     display: flex;
     flex-direction: row;
     list-style: none;
 }
 
-.group-3-title-content a, 
-.group-3-title-content pre {
+.group-3-title__content a, 
+.group-3-title__content pre {
     color: #232323;
     text-decoration: none;
     font-family: 'Lato Black';
     font-size: 25px;
 }
 
-.group-3-gallery-container {
+.group-3-gallery__container {
     box-sizing: border-box;
     flex-grow: 1;
     flex-basis: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin: 0 118px 50px 118px;
+    margin-bottom: 50px;
 }
 
-.group-3-gallery-content {
+.group-3-gallery__content {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 .group-3-gallery-col-1 {
@@ -341,7 +357,6 @@ body {
 .group-3-gallery-col-2 {
     display: flex;
     flex-direction: column;
-    padding-left: 45px;
 }
 
 .group-3-gallery-col-2-info {
@@ -354,20 +369,22 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 610px;
+    width: 595px;
 }
 
 .group-3-gallery-col-2__text-block > h3 {
     font-family: 'Cardo Bold';
-    font-size: 36.34px;
+    font-size: 36px;
     line-height: 50px;
 }
 
 .group-3-gallery-col-2__info-text {
+    min-width: 320px;
     font-family: 'Lato Regular';
-    font-size: 16.66px;
-    margin-left: 45px;
+    font-size: 16px;
+    margin-left: 30px;
     text-align: justify;
+    padding-top: 10px;
 }
 
 .group-3-gallery-col-2-info > a {
@@ -379,16 +396,24 @@ body {
 
 /*group-4*/
 .group-4 {
-    display: flex;
-    flex-direction: row;
-    height: 870px;
-    justify-content: space-between;
-    align-items: center;
+    min-height: 870px;
+}
+
+.group-4__container {
     background-color: #232323;
     background-image: url('./images/Scribble\ Light-group-4-bk.png');
     background-repeat: no-repeat;
     background-position: left bottom -25px;
+    min-height: inherit;
+}
+
+.group-4__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 145px 0 145px 110px;
+    gap: 20px;
 }
 
 .group-4-text-info {
@@ -434,16 +459,19 @@ body {
 
 /*group-5*/
 .group-5 {
+    min-height: 870px;
+}
+
+.group-5__container {
+    min-height: inherit;
     display: flex;
     flex-direction: row;
-    min-height: 870px;
     background-color: #f1f1f1;
     justify-content: center;
     align-items: center;
-    padding: 0 118px 0 118px;
 }
 
-.group-5-content {
+.group-5__content {
     flex-grow: 1;
     display: flex;
     flex-direction: row;
@@ -513,22 +541,27 @@ body {
 
 /*group-6-slider*/
 .group-6 {
+    min-height: 870px;
+}
+
+.group-6__container {
     display: flex;
     flex-direction: row;
-    height: 870px;
     background-color: #f1f1f1;
     background-image: url('./images/Scribble\ Dark-group-6-image-left.png'), url('./images/Scribble\ Dark-group-6-image-right.png');
     background-repeat: no-repeat;
     background-position: top 80px left, bottom right;
     justify-content: center;
     align-items: center;
+    min-height: inherit;
 }
 
-.group-6-content {
-    
+.group-6__content {
+    padding-left: 102px;
+    padding-right: 107px;
 }
 
-.group-6-content > h2 {
+.group-6__content > h2 {
     font-family: 'Cardo Bold';
     font-size: 81.46px;
     line-height: 81.46px;
@@ -570,6 +603,7 @@ body {
 }
 
 .gr6-slider-prev-button {
+
 }
 
 .gr6-slider-items-container {
@@ -620,17 +654,20 @@ body {
 }
 
 /*group-7-form*/
-
 .group-7-form {
+    min-height: 1060px;
+}
+
+.group-7__container {
+    min-height: inherit;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: #f1f1f1;
-    padding: 120px 118px 214px 118px;
 }
 
-.group-7-content {
+.group-7__content {
     flex-grow: 1;
     display: flex;
     flex-direction: row;
@@ -704,20 +741,27 @@ body {
 
 /*page footer*/
 .page-footer {
+    width: 100%;
+    min-height: 575px;
+}
+
+.page-footer__container {
+    min-height: inherit;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 575px;
     background-color: #c4c4c4;
     background-image: url('./images/page-footer-Scribble\ Dark.png');
     background-repeat: no-repeat;
     background-position: left bottom 37px;
-    padding: 115px;
+    padding-top: 115px;
+    padding-bottom: 115px;
 }
 
-.footer-content {
+.footer__content {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .footer-logo {
@@ -789,7 +833,302 @@ body {
 }
 
 @media (max-width: 575.98px) {
+    .content-prop {
+        max-width: 576px;
+        padding-left: 23px;
+        padding-right: 28px;
+    }
+
+    .header-top__content {
+        height: 150px;
+    }
+
+    .header-top-links {
+        justify-content: space-between;
+        flex-grow: 1;
+        max-width: 350px;
+    }
+
+    .header-top-links a {
+        width: 60px;
+        font-size: 15px;    
+    }
+
+    .header-top-buttons {
+        width: auto;
+    }
+
+    .header-top-buttons__button {
+        padding: 0;
+        font-size: 15px;
+        border: none;
+    }
+
+    .header-poster__container {
+        background-image: url('./images/Scribble\ Lightest.png'), url('./images/Scribble\ Dark.png');
+        background-repeat: no-repeat;
+        background-position: left 0 bottom -350px, right -80px bottom -80px;
+    }
+
+    .header-poster__content {
+        gap: 50px;
+        padding-bottom: 100px;
+    }
+
+    .header-poster__info {
+        max-width: 600px;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .header-poster__info h1 {
+        font-size: 60px;
+        line-height: 60px;
+    }
     
+    .header-poster__info p {
+        font-size: 15px;
+        padding-bottom: 20px;
+        line-height: 21px;
+    }
+        
+    .header-poster__info-button {
+        align-self: flex-end;
+        font-size: 15px;
+        width: 225px;
+        height: 40;
+    }
+
+    .header-poster__imagebox {
+        width: 100%;
+    }
+
+    .header-poster__imagebox > img {
+        width: auto;
+        height: auto;
+    }
+
+    .travel-logs__content {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .travel-logs__content h2 {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+    
+    .travel-logs__content p {
+        font-size: 12.5px;
+        margin-bottom: 35px;
+    }
+    
+    .travel-logs-button {
+        width: 180px;
+        height: 45px;
+        border: 2px solid #e9e7e7;
+        font-size: 16px;
+    }
+
+    .travel-logs__container {
+        background-position: left -300px top -130px, right -250px bottom -55px;
+    }
+
+    .group-2-items__container {
+        background-position: left -30px top -25px, right -90px bottom;
+    }
+
+    .group-2-items__content {
+        gap: 35px;
+        padding-top: 45px;
+    }
+    
+    .group-2-item {
+        max-width: 300px;
+        width: auto;
+    }
+
+    .group-2-item > img {
+        width: auto;
+        height: auto;
+    }
+    
+    .group-2-item hr {
+        height: 2px;
+        width: 60px;
+        margin: 18px 0 23px 0;
+    }
+    
+    .group-2-item h3 {
+        font-size: 42px;
+        line-height: 42px;
+        width: 95%;
+    }
+    
+    .group-2-item p {
+        font-size: 15px;
+        padding-top: 15px;
+    }
+
+    .group-3 {
+        min-height: 800px;
+        background-position: left 40px top 330px, right -60px top 110px;
+        background-size: 150px auto, 120px auto;
+    }
+    
+    .group-3-title__content {
+        min-height: 400px;
+        padding-top: 95px;
+    }
+    
+    .group-3-title__content h2 {
+        min-width: 300px;
+        font-size: 55px;
+        line-height: 65px;
+        margin-bottom: 10px;
+    }
+    
+    .group-3-title__content a, 
+    .group-3-title__content pre {
+        font-size: 12px;
+    }
+
+    .group-3-gallery__content {
+        gap: 10px;
+    }
+    
+    .group-3-gallery-col-1 > img {
+        width: 150px;
+        height: 450px;
+        object-fit: cover;
+    }
+
+    .group-3-gallery-col-2 > img {
+        width: 65%;
+        height: min-content;
+        object-fit: cover;
+    }
+
+    .group-3-gallery__scotch {
+        top: 155px;
+        left: -15px;
+    }
+
+    .group-3-gallery__scotch img{
+        width: 40px;
+        height: min-content;
+    }
+    
+    .group-3-gallery-col-2-info {
+        flex-direction: column;
+        padding-top: 15px;
+        min-width: 160px;
+        max-width: 250px;
+    }
+    
+    .group-3-gallery-col-2__text-block {
+        width: auto;
+        flex-direction: column;
+    }
+    
+    .group-3-gallery-col-2__text-block > h3 {
+        font-size: 18px;
+        line-height: 22px;
+        max-width: 200px;
+        text-align: start;
+    }
+    
+    .group-3-gallery-col-2__info-text {
+        min-width: auto;
+        font-size: 11.5px;
+        margin-left: 0px;
+        text-align: justify;
+        padding-top: 10px;
+    }
+
+    .group-3-gallery-col-2-info > a {
+        margin-top: 15px;
+    }
+
+    .group-3-gallery-col-2-info > a > img {
+        width: 60px;
+        height: auto;
+    }
+
+    .group-4 {
+        min-height: 870px;
+    }
+    
+    .group-4__container {
+        background-image: url('./images/Scribble\ Light-group-4-bk.png');
+        background-position: left bottom -25px;
+        min-height: inherit;
+    }
+    
+    .group-4__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 145px;
+        padding-bottom: 145px;
+        gap: 50px;
+    }
+    
+    .group-4-text-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: #e9e7e7;
+        text-align: justify;
+        flex-grow: 1;
+        height: auto;
+        max-width: auto;
+        width: 80%;
+    }
+    
+    .group-4-text-info > h2 {
+        font-family: 'Cardo Bold';
+        font-size: 46px;
+        line-height: 46px;
+        margin-bottom: 35px;
+        max-width: 380px;
+    }
+    
+    .group-4-main-info {
+        gap: 20px;
+        
+    }
+    
+    .group-4-text-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .group-4-text-item > h3 {
+        font-family: 'Lato Black';
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+    .group-4-text-item > p {
+        font-size: 20px;
+    }
+
+    .group-4-image-info {
+        max-width: auto;
+        width: 80%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .group-4-image-info img{
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -802,31 +1141,937 @@ body {
 }
 
 @media (max-width: 1199.98px) {
+    .header {
+        max-height: none;
+    }
 
+    .header-poster__content {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 1399.98px) {
-    
+    .group-5__content {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .group-5-text-info-block {
+        order: 2;
+    }
 }
 
 
 
 @media (min-width: 576px) and (max-width: 767.98px){
+    .content-prop {
+        max-width: 768px;
+        padding-left: 45px;
+        padding-right: 50px;
+    }
 
+    .header-top-links {
+        justify-content: space-between;
+        flex-grow: 1;
+        max-width: 450px;
+    }
+
+    .header-top-links a {
+        width: 85px;
+        font-size: 17.5px;    
+    }
+
+    .header-top-buttons {
+        width: auto;
+    }
+
+    .header-top-buttons__button {
+        padding: 8px 12px 8px 12px;
+        font-size: 17.5px;
+    }
+
+    .header-poster__container {
+        background-image: url('./images/Scribble\ Lightest.png'), url('./images/Scribble\ Dark.png');
+        background-repeat: no-repeat;
+        background-position: left 0 bottom -350px, right -25px bottom -70px;
+    }
+
+    .header-poster__content {
+        gap: 50px;
+    }
+
+    .header-poster__info {
+        max-width: 600px;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .header-poster__info h1 {
+        font-size: 80px;
+        line-height: 80px;
+    }
+    
+    .header-poster__info p {
+        font-size: 18px;
+        padding-bottom: 30px;
+        line-height: 25px;
+    }
+        
+    .header-poster__info-button {
+        align-self: flex-end;
+    }
+
+    .header-poster__imagebox {
+        width: 100%;
+    }
+
+    .header-poster__imagebox > img {
+        width: auto;
+        height: auto;
+    }
+
+    .travel-logs__container {
+        background-position: left -300px top -130px, right -250px bottom -55px;
+    }
+
+    .group-2-items__container {
+        background-position: left -10px top -25px, right -70px bottom;
+    }
+
+    .group-2-items__content {
+        gap: 50px;
+        padding-top: 80px;
+    }
+    
+    .group-2-item {
+        display: flex;
+        flex-direction: column;
+        width: 450px;
+    }
+
+    .group-2-item > img {
+        width: auto;
+        height: auto;
+    }
+    
+    .group-2-item hr {
+        height: 2px;
+        width: 70px;
+        margin: 25px 0 28px 0;
+    }
+    
+    .group-2-item h3 {
+        font-size: 48px;
+        line-height: 48px;
+        width: 95%;
+    }
+    
+    .group-2-item p {
+        font-size: 17px;
+        padding-top: 18px;
+    }
+
+    .group-3 {
+        min-height: 1200px;
+        background-position: left 50px top 438px, right -70px top 100px;
+        background-size: 200px auto, 150px auto;
+    }
+    
+    .group-3-title__content {
+        min-height: 400px;
+        padding-top: 110px;
+    }
+    
+    .group-3-title__content h2 {
+        min-width: 470px;
+        font-size: 65px;
+        line-height: 72px;
+        margin-bottom: 20px;
+    }
+    
+    .group-3-title__content a, 
+    .group-3-title__content pre {
+        font-size: 16px;
+    }
+
+    .group-3-gallery__content {
+        gap: 20px;
+    }
+    
+    .group-3-gallery-col-1 > img {
+        width: 200px;
+        height: 600px;
+        object-fit: cover;
+    }
+
+    .group-3-gallery-col-2 > img {
+        width: 75%;
+        height: min-content;
+        object-fit: cover;
+    }
+
+    .group-3-gallery__scotch {
+        top: 210px;
+        left: -25px;
+    }
+
+    .group-3-gallery__scotch img{
+        width: 50px;
+        height: min-content;
+    }
+    
+    .group-3-gallery-col-2-info {
+        flex-direction: column;
+        padding-top: 20px;
+        min-width: 240px;
+        max-width: 300px;
+    }
+    
+    .group-3-gallery-col-2__text-block {
+        width: auto;
+        flex-direction: column;
+    }
+    
+    .group-3-gallery-col-2__text-block > h3 {
+        font-size: 22px;
+        line-height: 28px;
+        max-width: 200px;
+        text-align: start;
+    }
+    
+    .group-3-gallery-col-2__info-text {
+        min-width: auto;
+        font-size: 12px;
+        margin-left: 0px;
+        text-align: justify;
+        padding-top: 10px;
+    }
+
+    .group-3-gallery-col-2-info > a {
+        margin-top: 26px;
+    }
+
+    .group-3-gallery-col-2-info > a > img {
+        width: 90px;
+        height: auto;
+    }
+
+    .group-4 {
+        min-height: 870px;
+    }
+    
+    .group-4__container {
+        background-image: url('./images/Scribble\ Light-group-4-bk.png');
+        background-position: left bottom -25px;
+        min-height: inherit;
+    }
+    
+    .group-4__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 145px;
+        padding-bottom: 145px;
+        gap: 50px;
+    }
+    
+    .group-4-text-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        color: #e9e7e7;
+        text-align: justify;
+        flex-grow: 1;
+        height: auto;
+        max-width: auto;
+        width: 80%;
+    }
+    
+    .group-4-text-info > h2 {
+        font-family: 'Cardo Bold';
+        font-size: 46px;
+        line-height: 46px;
+        margin-bottom: 35px;
+        max-width: 380px;
+    }
+    
+    .group-4-main-info {
+        gap: 20px;
+        
+    }
+    
+    .group-4-text-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .group-4-text-item > h3 {
+        font-family: 'Lato Black';
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+    .group-4-text-item > p {
+        font-size: 20px;
+    }
+
+    .group-4-image-info {
+        max-width: auto;
+        width: 80%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .group-4-image-info img{
+        margin-left: 0;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px){
-   
+    .content-prop {
+        max-width: 992px;
+        padding-left: 60px;
+        padding-right: 65px;
+    }
+
+    .header-top-links a {
+        width: 110px;
+        font-size: 17.5px;    
+    }
+
+    .header-top-buttons__button {
+        padding: 15px 45px 15px 45px;
+        font-size: 17.5px;
+    }
+
+    .header-poster__container {
+        background-image: url('./images/Scribble\ Lightest.png'), url('./images/Scribble\ Dark.png');
+        background-repeat: no-repeat;
+        background-position: left 0 bottom -350px, right -25px bottom -70px;
+    }
+
+    .header-poster__content {
+        gap: 80px;
+    }
+
+    .header-poster__info {
+        width: 85%;
+        gap: 10px;
+    }
+
+    .header-poster__info h1 {
+        font-size: 80px;
+        line-height: 80px;
+    }
+    
+    .header-poster__info p {
+        font-size: 18px;
+        padding-bottom: 30px;
+        line-height: 25px;
+    }
+        
+    .header-poster__info-button {
+        align-self: flex-end;
+    }
+
+    .header-poster__imagebox {
+        width: 100%;
+    }
+
+    .header-poster__imagebox > img {
+        width: auto;
+        height: auto;
+    }
+
+    .travel-logs__container {
+        background-position: left -375px top 30px, right -325px bottom 30px;
+    }
+
+    .group-2-items__content {
+        gap: 50px;
+        padding-top: 100px;
+    }
+    
+    .group-2-item {
+        display: flex;
+        flex-direction: column;
+        width: 550px;
+    }
+
+    .group-2-item > img {
+        width: auto;
+        height: auto;
+    }
+    
+    .group-2-item hr {
+        height: 3px;
+        width: 63px;
+        margin: 25px 0 23px 0;
+    }
+    
+    .group-2-item h3 {
+        font-size: 55px;
+        line-height: 55px;
+        text-align: start;
+        width: 90%;
+    }
+    
+    .group-2-item p {
+        font-size: 20px;
+        padding-top: 23px;
+    }
+
+    .group-3 {
+        min-height: 1400px;
+        background-position: left 80px top 425px, right -70px top 100px;
+        background-size: 250px auto, 200px auto;
+    }
+    
+    .group-3-title__content {
+        height: 400px;
+        padding-top: 110px;
+    }
+    
+    .group-3-title__content h2 {
+        max-width: 650px;
+        font-size: 76px;
+        line-height: 76px;
+        margin-bottom: 30px;
+    }
+    
+    .group-3-title__content a, 
+    .group-3-title__content pre {
+        font-size: 19px;
+    }
+
+    .group-3-gallery__content {
+        gap: 25px;
+    }
+    
+    .group-3-gallery-col-1 > img {
+        width: 300px;
+        object-fit: cover;
+    }
+
+    .group-3-gallery-col-2 > img {
+        width: 85%;
+        height: min-content;
+        object-fit: cover;
+    }
+
+    .group-3-gallery__scotch {
+        left: -30px;
+    }
+
+    .group-3-gallery__scotch img{
+        width: 60px;
+        height: min-content;
+    }
+    
+    .group-3-gallery-col-2-info {
+        flex-direction: column;
+        padding-top: 20px;
+        max-width: 380px;
+    }
+    
+    .group-3-gallery-col-2__text-block {
+        width: auto;
+        flex-direction: column;
+    }
+    
+    .group-3-gallery-col-2__text-block > h3 {
+        font-size: 30px;
+        line-height: 38px;
+        max-width: 280px;
+        text-align: start;
+    }
+    
+    .group-3-gallery-col-2__info-text {
+        min-width: auto;
+        font-size: 16px;
+        margin-left: 0px;
+        text-align: justify;
+        padding-top: 10px;
+    }
+
+    .group-3-gallery-col-2-info > a > img {
+        width: 120px;
+        height: auto;
+    }
+
+    .group-4 {
+        min-height: 870px;
+    }
+    
+    .group-4__container {
+        background-color: #232323;
+        background-image: url('./images/Scribble\ Light-group-4-bk.png');
+        background-repeat: no-repeat;
+        background-position: left bottom -25px;
+        min-height: inherit;
+    }
+    
+    .group-4__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 145px 0 145px 110px;
+    }
+    
+    .group-4-text-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #e9e7e7;
+        text-align: justify;
+        flex-grow: 1;
+        height: 562px;
+    }
+    
+    .group-4-text-info > h2 {
+        font-family: 'Cardo Bold';
+        font-size: 35px;
+        line-height: 35px;
+        margin-bottom: 50px;
+        max-width: 300px;
+    }
+    
+    .group-4-main-info {
+        gap: 20px;
+        max-width: 400px;
+    }
+    
+    .group-4-text-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .group-4-text-item > h3 {
+        font-family: 'Lato Black';
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    .group-4-text-item > p {
+        font-family: 'Lato Regular';
+        font-size: 17px;
+    }
+
+    .group-4-image-info {
+        max-width: 340px;
+        overflow: hidden;
+    }
+
+    .group-4-image-info img{
+        margin-left: -100%;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px){
+    .content-prop {
+        max-width: 1200px;
+    }
     
+    .header-top-links a {
+        width: 130px; 
+    }
+
+    .header-top-buttons__button {
+        padding: 15px 53px 15px 53px;
+    }
+
+    .header-poster__content {
+        gap: 80px;
+    }
+
+    .header-poster__info {
+        width: 662px;
+        gap: 10px;
+    }
+
+    .header-poster__info h1 {
+        font-size: 80px;
+        line-height: 80px;
+    }
+    
+    .header-poster__info p {
+        font-size: 18px;
+        padding-bottom: 30px;
+    }
+        
+    .header-poster__info-button {
+        align-self: flex-end;
+    }
+
+    .travel-logs__container {
+        background-position: left -275px top 40px, right -225px bottom 40px;
+    }
+
+    .group-2-items__content {
+        gap: 45px;
+        padding-top: 100px;
+    }
+    
+    .group-2-item {
+        display: flex;
+        flex-direction: column;
+        width: 425px;
+    }
+
+    .group-2-item > img {
+        width: auto;
+        height: auto;
+    }
+    
+    .group-2-item hr {
+        height: 3px;
+        width: 55px;
+        margin: 23px 0 20px 0;
+    }
+    
+    .group-2-item h3 {
+        font-size: 37px;
+        line-height: 37px;
+    }
+    
+    .group-2-item p {
+        font-size: 17px;
+        padding-top: 23px;
+    }
+
+    .group-3 {
+        min-height: 1500px;
+        background-position: left 80px top 540px, right -50px top 100px;
+        background-size: 250px auto, 200px auto;
+    }
+    
+    .group-3-title__content {
+        padding-top: 130px;
+    }
+    
+    .group-3-title__content h2 {
+        max-width: 790px;
+        font-family: 'Cardo Bold';
+        font-size: 94px;
+        line-height: 94px;
+        color: #232323;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .group-3-title__content a, 
+    .group-3-title__content pre {
+        font-size: 22px;
+    }
+
+    .group-3-gallery__content {
+        gap: 35px;
+    }
+    
+    .group-3-gallery-col-1 > img {
+        width: 380px;
+        object-fit: cover;
+    }
+
+    .group-3-gallery-col-2 > img {
+        width: 85%;
+        height: min-content;
+        object-fit: cover;
+    }
+    
+    .group-3-gallery-col-2-info {
+        flex-direction: column;
+        padding-top: 20px;
+        max-width: 380px;
+    }
+    
+    .group-3-gallery-col-2__text-block {
+        width: auto;
+        flex-direction: column;
+    }
+    
+    .group-3-gallery-col-2__text-block > h3 {
+        font-size: 30px;
+        line-height: 38px;
+        max-width: 280px;
+        text-align: start;
+    }
+    
+    .group-3-gallery-col-2__info-text {
+        min-width: auto;
+        font-size: 16px;
+        margin-left: 0px;
+        text-align: justify;
+        padding-top: 10px;
+    }
+
+    .group-4 {
+        min-height: 870px;
+    }
+    
+    .group-4__container {
+        background-color: #232323;
+        background-image: url('./images/Scribble\ Light-group-4-bk.png');
+        background-repeat: no-repeat;
+        background-position: left bottom -25px;
+        min-height: inherit;
+    }
+    
+    .group-4__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 145px 0 145px 110px;
+        gap: 100px;
+    }
+    
+    .group-4-text-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #e9e7e7;
+        text-align: justify;
+        flex-grow: 1;
+        height: 562px;
+    }
+    
+    .group-4-text-info > h2 {
+        font-family: 'Cardo Bold';
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 50px;
+    }
+    
+    .group-4-main-info {
+        gap: 50px;
+    }
+    
+    .group-4-text-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .group-4-text-item > h3 {
+        font-family: 'Lato Black';
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .group-4-text-item > p {
+        font-family: 'Lato Regular';
+        font-size: 18px;
+    }
+
+    .group-4-image-info {
+        width: 365px;
+        overflow: hidden;
+    }
+
+    .group-4-image-info img{
+        margin-left: -70%;
+        z-index: 2;
+    }
 }
 
 @media (min-width: 1200px) and (max-width: 1399.98px){
-   
+    .content-prop {
+        max-width: 1400px;
+    }
+    
+    .header-poster__info {
+        width: 450px;
+    }
+    
+    .header-poster__info h1 {
+        font-size: 52px;
+        line-height: 52px;
+    }
+    
+    .header-poster__info p {
+        font-size: 16px;
+        padding-bottom: 30px;
+    }
+    
+    .header-poster__info-button {
+
+    }
+    
+    .header-poster__imagebox > img {
+        width: 450px;
+        height: auto;
+    }
+
+    .travel-logs__container {
+        background-position: left -175px top 50px, right -125px bottom 50px;
+    }
+    
+    .group-2-items__content {
+        gap: 30px;
+    }
+    
+    .group-2-item {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+
+    .group-2-item > img {
+        width: auto;
+        height: auto;
+    }
+    
+    .group-2-item hr {
+        height: 2px;
+        width: 45px;
+        margin: 25px 0 23px 0;
+    }
+    
+    .group-2-item h3 {
+        font-size: 34px;
+        line-height: 34px;
+    }
+    
+    .group-2-item p {
+        font-size: 13px;
+        padding-top: 25px;
+    }
+
+    .group-3 {
+        min-height: 1600px;
+        background-position: left 150px top 600px, right -78px top 50px;
+        background-size: 300px auto, auto auto;
+    }
+
+    .group-3-gallery__content {
+        gap: 60px;
+    }
+    
+    .group-3-gallery-col-1 > img {
+        width: 450px;
+        object-fit: cover;
+    }
+
+    .group-3-gallery-col-2 > img {
+        width: 400px;
+        height: min-content;
+        object-fit: cover;
+    }
+    
+    .group-3-gallery-col-2-info {
+        flex-direction: column;
+        padding-top: 20px;
+        max-width: 400px;
+    }
+    
+    .group-3-gallery-col-2__text-block {
+        width: auto;
+        flex-direction: column;
+    }
+    
+    .group-3-gallery-col-2__text-block > h3 {
+        font-size: 33px;
+        line-height: 40px;
+        width: 300px;
+        text-align: justify;
+    }
+    
+    .group-3-gallery-col-2__info-text {
+        min-width: none;
+        font-size: 16px;
+        margin-left: 0px;
+        text-align: justify;
+        padding-top: 10px;
+    }
+
+    .group-4-image-info {
+        width: 500px;
+        overflow: hidden;
+    }
+
+    .group-4-image-info img{
+        margin-left: -50%;
+    }
+
+    .group-5 {
+        min-height: 870px;
+    }
+    
+    .group-5__container {
+       
+    }
+    
+    .group-5__content {
+        min-height: 516px;
+        padding-top: 120px;
+        gap: 50px;
+    }
+    
+    .group-5-image-block {
+        width: 50%;
+    }
+
+    .group-5-image-block > img {
+        width: 100%;
+        height: auto;
+        box-shadow: 0 0 5px 0 #2323237e;
+    }
+    
+    .group-5-text-info-block > h2 {
+        font-size: 85px;
+        line-height: 85px;
+        min-height: auto;
+        margin-bottom: 40px;
+    }
+    
+    .group-5-text-info-block > ul {
+        width: 100%;
+    }
+    
+    .group-5-text-info-block > ul > li {
+      
+    }
+    
+    .group-5-text-info-first-link {
+        
+    }
+    
+    .group-5__accordeon-btn {
+       
+    }
+    
+    .group-5__accordeon-btn__elem {
+        font-size: 20px;
+    }
+    
+    .group-5__accordeon-btn__panel {
+    }
+    
+    .group-5__accordeon-btn__panel > p {
+        margin-top: 20px;
+        font-size: 22px;
+        width: 100%;
+    }
 }
 
-@media (min-width: 1400px){
-    
+@media (min-width: 1400px) and (max-width: 1439.98px){
+    .content-prop {
+        max-width: 1400px;
+        padding-left: 90px;
+        padding-right: 95px;
+    }
+
+    .group-4__content {
+        padding: 145px 0 145px 110px;
+    }    
+}
+
+@media (min-width: 1440px){
+
 }
