@@ -31,6 +31,7 @@ main {
 }
 
 
+
 /*HEADER*/
 .header {
     position: fixed;    
@@ -353,10 +354,11 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 0 20px;
     border-bottom: 1px solid white;
     padding: 0 20px 0 20px;
     margin: 0 auto;
+    align-content: flex-start;
 }
 
 .footer-item {
@@ -434,6 +436,7 @@ footer {
     display: block;
     font-size: 14px;
     color: #d44346;
+    margin-bottom: 2px;
 }
 
 .footer-latest-post-datetime {
@@ -461,6 +464,7 @@ footer {
     flex-direction: column;
     height: 275px;
     justify-content: space-between;
+    font-family: 'Georgia Regular';
 }
 
 .input-user-info {
@@ -472,7 +476,8 @@ footer {
     border-radius: 10px;
     padding: 10px;
     font-size: 13px;
-    color: #989898;
+    color: #bebebe;
+    outline: none;
 }
 
 textarea.input-contact-form {
@@ -485,9 +490,26 @@ textarea.input-contact-form {
     border-radius: 10px;
     padding: 10px;
     background-color: #d54346;
+}
+
+.contact-submit strong {
     font-size: 13px;
     color: #ffffff;
+    font-weight: 600;
 }
+
+.contact-us form::-moz-placeholder {
+    color: #989898;;
+}
+
+.contact-us form::-webkit-input-placeholder {
+    color: #989898;;
+}
+
+.contact-us form:-ms-input-placeholder {
+    color: #989898;;
+}
+
 
 .footer-info {
     border-top: 1px solid #d8d9da;

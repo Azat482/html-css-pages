@@ -11,6 +11,15 @@ body {
     align-items: center;
 }
 
+button:active, 
+button:focus {
+    outline: none;
+}
+  
+button::-moz-focus-inner {
+    border: 0;
+}
+
 main.main {
     width: 100%;
 }
@@ -37,11 +46,13 @@ main.main {
 }
 
 .header-top__content {
+    display: flex;
+    flex-direction: row;
     height: 215px;
     align-items: center;
 }
 
-.header-top__content nav {
+.header__top-nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -91,6 +102,74 @@ main.main {
     color: black;
     font-family: 'Lato Black';
 }
+
+/*Hamburger button BEGIN*/
+.header__top-hamburger-btn-container{
+    visibility: hidden;
+    position: absolute;
+    z-index: 6;
+}
+
+.header__top-hamburger-btn{
+    width: 60px;
+    height: 60px;
+    background-color: inherit;
+    border: none;
+    position: relative;
+    background-color: inherit;  
+}
+
+.header__top-hamburger-btn .header__top-hamburger-btn-line{
+    position: absolute;
+    display: block;
+    right: 8px;
+    left:  8px;
+    top: 28px;
+    background-color: #232323;
+    height: 4px;
+    transition: background-color;
+    transition-delay: 0.15s;
+}
+
+.header__top-hamburger-btn .header__top-hamburger-btn-line::before,
+.header__top-hamburger-btn .header__top-hamburger-btn-line::after{
+    position: absolute;
+    display: block;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #232323;
+    transition-duration: 0.1s, 0.35s, 0.35s;
+    transition-delay: 0.15s, 0.35s, 0s;
+}
+
+.header__top-hamburger-btn .header__top-hamburger-btn-line::before{
+    top: -16px;
+    transition-property: background-color, top, transform;
+}
+
+.header__top-hamburger-btn .header__top-hamburger-btn-line::after{
+    bottom: -16px;
+    transition-property: background-color, bottom, transform;
+}
+
+.header__top-hamburger-btn.header__top-hambtn-active .header__top-hamburger-btn-line{
+    background-color: inherit;
+}
+
+.header__top-hamburger-btn.header__top-hambtn-active .header__top-hamburger-btn-line::before{
+    top: 0;
+    transform: rotate(45deg);
+    background-color: #f1f1f1;
+}
+
+.header__top-hamburger-btn.header__top-hambtn-active .header__top-hamburger-btn-line::after{
+    bottom: 0;
+    transform: rotate(-45deg);
+    background-color: #f1f1f1;
+}
+/*Hamburger button END*/
 
 .header-poster__container {
     background-image: url('./images/Scribble\ Lightest.png'), url('./images/Scribble\ Dark.png');
@@ -513,6 +592,7 @@ main.main {
     background-color: inherit; /*for Firefox*/
     padding: 20px 43px 20px 36px;
     min-height: calc(70px - 3px * 2);
+    cursor: pointer;
 }
 
 .group-5__accordeon-btn__elem {
@@ -588,7 +668,7 @@ main.main {
     border-radius: 10px;
     background-color: #f1f1f1;
     opacity: 1;
-    
+    cursor: pointer;
 }
 
 .group-6-slider-buttons {
@@ -833,6 +913,86 @@ main.main {
 }
 
 
+
+
+
+
+@media (max-width: 767.98px) {
+
+}
+
+@media (max-width: 991.98px) {
+    .header-top__content {
+        justify-content: flex-end;
+    }
+
+    .header__top-hamburger-btn-container{
+        visibility: visible;
+        position: relative;
+    }
+
+    .header__top-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: absolute;
+        background-color: #1f1f1f;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 5;
+        transition: transform 0.75s;
+        transform: translateY(-100%);
+    }
+
+    .header__top-nav.header__top-hamburger-list-active {
+        transform: translateY(0);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .header__top-nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: #f1f1f1;
+        flex-grow: 0;
+        align-items: center;
+    }
+
+    .header-top-links a {
+        width: auto;
+        font-size: 20.83px;
+    }
+    
+    .header-top-links__home-link {
+        font-family: 'Lato Black';
+        color: #f1f1f1;
+    }
+    
+    .header-top-links__link {
+        font-family: 'Lato Light';
+        color: #f1f1f1;
+    }
+    
+    .header-top-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        list-style: none;
+    }
+    
+    .header-top-buttons__button {
+        padding: 0;
+        border: none;
+        font-size: 20.83px;
+        color: #f1f1f1;
+        font-family: 'Lato Light';
+    }
+}
+
 @media (max-width: 575.98px) {
     .content-prop {
         max-width: 576px;
@@ -841,7 +1001,11 @@ main.main {
     }
 
     .header-top__content {
-        height: 150px;
+        height: 80px;
+    }
+
+    .header__top-nav.header__top-hamburger-list-active {
+        padding-top: 80px;   
     }
 
     .header-top-links {
@@ -851,8 +1015,9 @@ main.main {
     }
 
     .header-top-links a {
-        width: 60px;
-        font-size: 15px;    
+        width: auto;
+        font-size: 40px;
+        margin-bottom: 15px;    
     }
 
     .header-top-buttons {
@@ -861,8 +1026,7 @@ main.main {
 
     .header-top-buttons__button {
         padding: 0;
-        font-size: 15px;
-        border: none;
+        font-size: 40px;
     }
 
     .header-poster__container {
@@ -1446,7 +1610,7 @@ main.main {
         background-color: #c4c4c4;
         background-image: url('./images/page-footer-Scribble\ Dark.png');
         background-repeat: no-repeat;
-        background-position: left -60px bottom -30px;
+        background-position: left -60px bottom -40px;
         background-size: 250px auto;
         padding-top: 40px;
         padding-bottom: 40px;
@@ -1466,12 +1630,14 @@ main.main {
         min-width: auto;
         max-width: 240px;
         height: 120px;
-        text-align: justify;
+        text-align: center;
         font-family: 'Cardo Bold';
-        font-size: 55px;
-        line-height: 55px;
+        font-size: 65px;
+        line-height: 60px;
         align-self: center;
         margin-right: 0;
+        margin-top: 30px;
+        margin-bottom: 20px;
     }
 
     .footer-links {
@@ -1485,30 +1651,31 @@ main.main {
     .footer-links a {
         text-decoration: none;
         font-family: 'Lato Regular';
-        font-size: 14px;
+        font-size: 30px;
         color: #232323;
     }
 
     .footer-links > h3 {
         font-family: 'Lato Black';
-        font-size: 18px;
+        font-size: 40px;
         color: #232323;
         margin-bottom: 20px;
     }
 
     .footer-links > ul {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 10px;
-        column-gap: 20px;
+        display: flex;
+        flex-direction: column;
         align-self: center;
-        margin: 0 auto;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 12px;
+        margin: 20px auto;
     }
 
     .footer-other-info {
         align-self: center;
         font-family: 'Lato Regular';
-        font-size: 8px;
+        font-size: 15px;
         color: #232323;
     }
 }
@@ -1521,12 +1688,14 @@ main.main {
     }
 
     .header-top__content {
-        max-height: 120px;
+        height: 80px;
+        padding-top: 20px;
     }
 
     .header-top-links a {
-        max-width: 40px;
-        font-size: 13px;    
+        width: auto;
+        font-size: 30px;
+        margin-bottom: 12px;    
     }
 
     .header-top-buttons {
@@ -1534,8 +1703,8 @@ main.main {
     }
 
     .header-top-buttons__button {
-        font-size: 13px;
-        margin-left: 20px;
+        padding: 0;
+        font-size: 30px;
     }
 
     .header-poster__info > h1 {
@@ -1617,15 +1786,59 @@ main.main {
         margin-bottom: 10px;
         text-align: center;
     }
-}
 
-@media (max-width: 767.98px) {
+    .footer-logo {
+        min-width: auto;
+        max-width: 240px;
+        height: 120px;
+        text-align: center;
+        font-family: 'Cardo Bold';
+        font-size: 60px;
+        line-height: 55px;
+        align-self: center;
+        margin-right: 0;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
 
-}
+    .footer-links {
+        flex-grow: 1;
+    }
 
-@media (max-width: 991.98px) {
+    .footer-links li {
+        list-style: none;
+    }
 
-   
+    .footer-links a {
+        text-decoration: none;
+        font-family: 'Lato Regular';
+        font-size: 25px;
+        color: #232323;
+    }
+
+    .footer-links > h3 {
+        font-family: 'Lato Black';
+        font-size: 35px;
+        color: #232323;
+        margin-bottom: 20px;
+    }
+
+    .footer-links > ul {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 12px;
+        margin: 20px auto;
+    }
+
+    .footer-other-info {
+        align-self: center;
+        font-family: 'Lato Regular';
+        font-size: 12px;
+        color: #232323;
+    }
 }
 
 @media (max-width: 1199.98px) {
@@ -1659,6 +1872,14 @@ main.main {
         padding-right: 50px;
     }
 
+    .header-top__content {
+        height: 100px;
+    }
+
+    .header__top-nav.header__top-hamburger-list-active {
+        padding-top: 100px;   
+    }
+
     .header-top-links {
         justify-content: space-between;
         flex-grow: 1;
@@ -1666,8 +1887,9 @@ main.main {
     }
 
     .header-top-links a {
-        width: 85px;
-        font-size: 17.5px;    
+        width: auto;
+        font-size: 40px;
+        margin-bottom: 15px;    
     }
 
     .header-top-buttons {
@@ -1675,8 +1897,8 @@ main.main {
     }
 
     .header-top-buttons__button {
-        padding: 8px 12px 8px 12px;
-        font-size: 17.5px;
+        padding: 0;
+        font-size: 40px;
     }
 
     .header-poster__container {
@@ -1772,10 +1994,10 @@ main.main {
     }
     
     .group-3-title__content h2 {
-        min-width: 470px;
-        font-size: 65px;
-        line-height: 72px;
-        margin-bottom: 20px;
+        min-width: 460px;
+        font-size: 62px;
+        line-height: 68px;
+        margin-bottom: 15px;
     }
     
     .group-3-title__content a, 
@@ -1875,7 +2097,7 @@ main.main {
         flex-grow: 1;
         height: auto;
         max-width: auto;
-        width: 80%;
+        width: 85%;
     }
     
     .group-4-text-info > h2 {
@@ -1884,6 +2106,7 @@ main.main {
         line-height: 46px;
         margin-bottom: 35px;
         max-width: 380px;
+        text-align: left;
     }
     
     .group-4-main-info {
@@ -1908,7 +2131,7 @@ main.main {
 
     .group-4-image-info {
         max-width: auto;
-        width: 80%;
+        width: 85%;
         overflow: hidden;
         display: flex;
         flex-direction: row;
@@ -2012,8 +2235,8 @@ main.main {
     }
     
     .group-6__content {
-        padding-left: 102px;
-        padding-right: 107px;
+        padding-left: 45px;
+        padding-right: 50px;
     }
     
     .group-6__content > h2 {
@@ -2301,14 +2524,22 @@ main.main {
         padding-right: 65px;
     }
 
+    .header-top__content {
+        height: 140px;
+    }
+
+    .header__top-nav.header__top-hamburger-list-active {
+        padding-top: 140px;   
+    }
+
     .header-top-links a {
-        width: 110px;
-        font-size: 17.5px;    
+        width: auto;
+        font-size: 45px;
+        margin-bottom: 20px;    
     }
 
     .header-top-buttons__button {
-        padding: 15px 45px 15px 45px;
-        font-size: 17.5px;
+        font-size: 45px;
     }
 
     .header-poster__container {
@@ -2467,14 +2698,14 @@ main.main {
     }
 
     .group-4 {
-        min-height: 870px;
+        min-height: 700px;
     }
     
     .group-4__container {
         background-color: #232323;
         background-image: url('./images/Scribble\ Light-group-4-bk.png');
         background-repeat: no-repeat;
-        background-position: left bottom -25px;
+        background-position: left bottom -45px;
         min-height: inherit;
     }
     
@@ -2483,7 +2714,8 @@ main.main {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        padding: 145px 0 145px 110px;
+        padding: 105px 65px 105px 60px;
+        gap: 45px;
     }
     
     .group-4-text-info {
@@ -2500,13 +2732,13 @@ main.main {
         font-family: 'Cardo Bold';
         font-size: 35px;
         line-height: 35px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         max-width: 300px;
     }
     
     .group-4-main-info {
-        gap: 20px;
-        max-width: 400px;
+        gap: 15px;
+        max-width: 420px;
     }
     
     .group-4-text-item {
@@ -2517,8 +2749,8 @@ main.main {
     
     .group-4-text-item > h3 {
         font-family: 'Lato Black';
-        font-size: 28px;
-        margin-bottom: 10px;
+        font-size: 26px;
+        margin-bottom: 7px;
     }
     .group-4-text-item > p {
         font-family: 'Lato Regular';
@@ -2526,12 +2758,12 @@ main.main {
     }
 
     .group-4-image-info {
-        max-width: 340px;
+        max-width: 280px;
         overflow: hidden;
     }
 
     .group-4-image-info img{
-        margin-left: -100%;
+        margin-left: -135%;
     }
 
     .group-5 {
@@ -2762,7 +2994,7 @@ main.main {
         flex-direction: column;
         align-self: stretch;
         justify-content: space-between;
-        width: 320px;
+        width: 315px;
     }
 
     .group-7-form-block > h2 {
@@ -3052,8 +3284,8 @@ main.main {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 145px 0 145px 110px;
-        gap: 100px;
+        padding: 145px 110px 145px 110px;
+        gap: 70px;
     }
     
     .group-4-text-info {
@@ -3068,25 +3300,27 @@ main.main {
     
     .group-4-text-info > h2 {
         font-family: 'Cardo Bold';
-        font-size: 48px;
+        font-size: 45px;
         line-height: 48px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
+        max-width: 390px;
     }
     
     .group-4-main-info {
-        gap: 50px;
+        gap: 40px;
     }
     
     .group-4-text-item {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        max-width: 505px;
     }
     
     .group-4-text-item > h3 {
         font-family: 'Lato Black';
-        font-size: 30px;
-        margin-bottom: 20px;
+        font-size: 25px;
+        margin-bottom: 14px;
     }
     .group-4-text-item > p {
         font-family: 'Lato Regular';
@@ -3094,12 +3328,12 @@ main.main {
     }
 
     .group-4-image-info {
-        width: 365px;
         overflow: hidden;
+        max-width: 300px;
     }
 
     .group-4-image-info img{
-        margin-left: -70%;
+        margin-left: -125%;
         z-index: 2;
     }
 
@@ -3197,8 +3431,12 @@ main.main {
     }
     
     .gr6-slider-items-container {
-        width: 804px;
+        width: 754px;
         overflow: hidden;
+    }
+
+    .gr6-slider-item {
+        min-width: 367px;
     }
 
     /*group-7-form*/
@@ -3221,7 +3459,7 @@ main.main {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 60px;
+        gap: 50px;
     }
 
     .group-7-image-block {
@@ -3234,7 +3472,7 @@ main.main {
     }
 
     .group-7-form-block {
-        width: 400px;
+        width: 390px;
     }
 
     .group-7-form-block > h2 {
@@ -3522,7 +3760,7 @@ main.main {
 
     .group-7__content {
         justify-content: center;
-        gap: 80px;
+        gap: 70px;
     }
 
     .group-7-image-block {
@@ -3538,7 +3776,7 @@ main.main {
         flex-direction: column;
         align-self: stretch;
         justify-content: space-between;
-        width: 458px;
+        width: 440px;
     }
 
     .group-7-form-block > h2 {

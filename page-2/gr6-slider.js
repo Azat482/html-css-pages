@@ -5,10 +5,10 @@ const slider_item = document.querySelector('.gr6-slider-item');
 const slider_items_count = document.querySelectorAll('.gr6-slider-item').length;
 
 let show_slider_item = 3;
-const slider_item_border = 4;
-const slider_item_width = slider_item.clientWidth + slider_item_border * 2;
-const slider_item_gap = 20;
-const slider_item_shift = slider_item_width + slider_item_gap;
+let slider_item_border = 4;
+let slider_item_width = slider_item.clientWidth + slider_item_border * 2;
+let slider_item_gap = 20;
+let slider_item_shift = slider_item_width + slider_item_gap;
 let position = 0;
 let position_index = 0;
 
@@ -27,11 +27,11 @@ prev_button.addEventListener('click', ()=>{
 
 next_button.addEventListener('click', ()=>{
     console.log('next slide');
-    if(position_index < slider_items_count - show_slider_item){
+    if(position_index < slider_items_count - show_slider_item ){
         position -= slider_item_shift;
         position_index++;
     }
-    console.log(position_index, slider_items_count)
+    console.log(position_index, slider_items_count, show_slider_item)
     set_position(position);
 });
 
@@ -43,9 +43,21 @@ const set_slides_num = ()=>{
     if(this.window.innerWidth >= 992 && this.window.innerWidth < 1400){
         show_slider_item = 2;
     }
-    if(this.window.innerWidth < 992){
+    else if(this.window.innerWidth < 992){
         show_slider_item = 1;
     }
+    else
+    {
+        show_slider_item = 3;
+    }
+    while(position_index > slider_items_count - show_slider_item){
+        position_index -= 1;
+    }
+    slider_item_width = slider_item.clientWidth + slider_item_border * 2;
+    slider_item_shift = slider_item_width + slider_item_gap;
+    position = -(slider_item_shift * position_index);
+    set_position(position);
+    console.log(slider_item_width, show_slider_item);
 }
 
 set_slides_num();
