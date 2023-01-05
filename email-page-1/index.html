@@ -22,8 +22,12 @@ xmlns:o="urn:schemas-microsoft-com:office:office" lang="ru">
             margin: 0;
         }
 
+        table td {
+            border-collapse: collapse;
+        }
+
         .table-600 {
-            
+            width: 600px;
         }
 
         .content {
@@ -71,17 +75,107 @@ xmlns:o="urn:schemas-microsoft-com:office:office" lang="ru">
             background-size: cover;
         }
 
+        /*SLIDER*/
+        .gr5-slider-btns__container {
+            position: absolute;
+            top: 115px;
+            right: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .gr5-slider-btns__container img {
+            cursor: pointer;
+        }
+
+        .gr5-slider-track__container {
+            position: relative;
+            width: 600px;
+            overflow: hidden;
+        }
+
+        .gr5-slider-track {
+            transition: transform .5s;
+        }
+
+        .gr5-slider-track img {
+            display: inline-block;
+            width: 600px;
+            height: 260px;
+        }
+
+        .gr5-slider-indicators__container span {
+            margin: 5px;
+            padding: 0;
+        }
+
+        .gr5-slider-indicators {
+            box-sizing: border-box;
+            display: inline-block;
+            background-color: inherit;
+            border: solid 3px #323E66;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .gr5-slider-indicators__isactive {
+            display: inline-block;
+            background-color: #323E66;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+        }
+
+        .gr5-ref-btn {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #323E66;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            padding-top: 28px;
+            padding-right: 77px;
+            padding-bottom: 28px;
+            padding-left: 77px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        /*SLIDER*/
+
         .gr7-contact-us-block__container {
             background-image: url("./images/gr7-bg.png");
             background-repeat: no-repeat;
             background-size: cover;
         }
 
-        /*for mobile version, adaptive*/
-        @media  screen and (max-width: 600px) {
-
+        .gr7-item-header {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 10px;
         }
 
+        .gr7-item-info {
+            font-family: Georgia, serif;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .gr7-contact-us-block__container img {
+            margin-right: 20px;
+        }
+
+        .gr7-item-table {
+            margin-bottom: 45px
+        }
+
+        /*for mobile version, adaptive*/
+        @media  screen and (max-width: 600px) {
+            p {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body style="margin: 0; padding: 0; background-color: #ffffff;">
@@ -218,16 +312,69 @@ xmlns:o="urn:schemas-microsoft-com:office:office" lang="ru">
                         </tr>
                         <tr>
                             <td>
-                                <table class="gr5-slider__container" cellpadding="0" cellspacing="0" align="center" width="600" height="490" bgcolor="blue">
+                                <table class="gr5-slider__container" cellpadding="0" cellspacing="0" align="center" width="600" height="490">
                                     <tr>
-                                        <td></td>
+                                        <td align="center" valign="top" height="40px">
+                                            <h3 style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: 700; color: #303030;">
+                                                Вы видите свои текущие расходы
+                                            </h3>     
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <table class="gr5-slider-box" cellpadding="0" cellspacing="0" align="center" valign="top" width="600" height="390">
+                                                <tr>
+                                                    <td align="center" valign="top" height="260">
+                                                        <div class="gr5-slider-track__container">
+                                                            <table class="gr5-slider-btns__container content" cellpadding="0" cellspacing="0" align="center" width="600">
+                                                                <tr>
+                                                                    <td class="gr5-slider__prev-btn__container" align="left">
+                                                                        <img class="gr5-slider__prev-btn" src="./images/gr5-slider__prev-btn.svg" alt="previous slide">
+                                                                    </td>
+                                                                    <td class="gr5-slider__next-btn__container" align="right">
+                                                                        <img class="gr5-slider__next-btn" src="./images/gr5-slider__next-btn.svg" alt="next slide">
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table class="gr5-slider-track" cellpadding="0" cellspacing="0" align="center">
+                                                                <tr>
+                                                                    <td><img class="gr5-slider-item" src="./images/gr5-slider__item1.png" alt="item 1"></td>
+                                                                    <td><img class="gr5-slider-item" src="./images/gr5-slider__item2.png" alt="item 2"></td>
+                                                                    <td><img class="gr5-slider-item" src="./images/gr5-slider__item3.png" alt="item 3"></td>
+                                                                    <td><img class="gr5-slider-item" src="./images/gr5-slider__item4.png" alt="item 4"></td>
+                                                                    <td><img class="gr5-slider-item" src="./images/gr5-slider__item5.png" alt="item 5"></td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" valign="top" style="padding-top: 32px;">
+                                                        <div class="gr5-slider-indicators__container">
+                                                            <span class="gr5-slider-dot gr5-slider-indicators__isactive gr5-indicator-slide-1"></span>
+                                                            <span class="gr5-slider-dot gr5-slider-indicators gr5-indicator-slide-2"></span>
+                                                            <span class="gr5-slider-dot gr5-slider-indicators gr5-indicator-slide-3"></span>
+                                                            <span class="gr5-slider-dot gr5-slider-indicators gr5-indicator-slide-4"></span>
+                                                            <span class="gr5-slider-dot gr5-slider-indicators gr5-indicator-slide-5"></span>    
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" valign="center" height="85">
+                                            <a class="gr5-ref-btn" href="/">
+                                                Получить дашборд
+                                            </a>
+                                        </td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <table class="gr6-text__container content" cellpadding="0" cellspacing="0" align="center" width="600" height="380">
+                                <table class="gr6-text__container content" cellpadding="0" cellspacing="0" align="center" width="600" height="460">
                                     <tr>
                                         <td align="center">
                                             <p class="big-text-box" style="margin-bottom: 45px;">
@@ -248,18 +395,18 @@ xmlns:o="urn:schemas-microsoft-com:office:office" lang="ru">
                         </tr>
                         <tr>
                             <td>
-                                <table class="gr7-contact-us-block__container content" cellpadding="0" cellspacing="0" align="center" width="600" height="390">
+                                <table class="gr7-contact-us-block__container content" cellpadding="0" cellspacing="0" align="center" width="600" height="390" style="color: #ffffff;">
                                     <tr>
                                         <td align="left">
                                             <table cellpadding="0" cellspacing="0" align="center">
                                                 <tr>
                                                     <td>
-                                                        <table cellpadding="0" cellspacing="0" align="center">
+                                                        <table class="gr7-item-table" cellpadding="0" cellspacing="0" align="center">
                                                             <tr>
-                                                                <td><img src="./images/gr7-item1.png" alt=""></td>
+                                                                <td><img src="./images/gr7-item1.png" alt="item image" width="50" height="50"></td>
                                                                 <td>
-                                                                    <p></p>
-                                                                    <p></p>
+                                                                    <p class="gr7-item-header">Телефон</p>
+                                                                    <p class="gr7-item-info">+7 (499) 281-60-32</p>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -267,12 +414,12 @@ xmlns:o="urn:schemas-microsoft-com:office:office" lang="ru">
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <table cellpadding="0" cellspacing="0" align="center">
+                                                        <table class="gr7-item-table" cellpadding="0" cellspacing="0" align="center">
                                                             <tr>
-                                                                <td><img src="./images/gr7-item2.png" alt=""></td>
+                                                                <td><img src="./images/gr7-item2.png" alt="item image" width="50" height="50"></td>
                                                                 <td>
-                                                                    <p></p>
-                                                                    <p></p>
+                                                                    <p class="gr7-item-header">WhatsApp</p>
+                                                                    <p class="gr7-item-info">info@reaspekt.ru</p>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -280,12 +427,12 @@ xmlns:o="urn:schemas-microsoft-com:office:office" lang="ru">
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <table cellpadding="0" cellspacing="0" align="center">
+                                                        <table class="gr7-item-table" cellpadding="0" cellspacing="0" align="center" style="margin-bottom: 0;">
                                                             <tr>
-                                                                <td><img src="./images/gr7-item3.png" alt=""></td>
+                                                                <td><img src="./images/gr7-item3.png" alt="item image" width="50" height="50"></td>
                                                                 <td>
-                                                                    <p></p>
-                                                                    <p></p>
+                                                                    <p class="gr7-item-header">Email</p>
+                                                                    <p class="gr7-item-info">info@reaspekt.ru</p>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -297,12 +444,12 @@ xmlns:o="urn:schemas-microsoft-com:office:office" lang="ru">
                                             <table cellpadding="0" cellspacing="0" align="center">
                                                 <tr>
                                                     <td>
-                                                        <table cellpadding="0" cellspacing="0" align="center">
+                                                        <table class="gr7-item-table" cellpadding="0" cellspacing="0" align="center">
                                                             <tr>
-                                                                <td><img src="./images/gr7-item4.png" alt=""></td>
+                                                                <td><img src="./images/gr7-item4.png" alt="item image" width="50" height="50"></td>
                                                                 <td>
-                                                                    <p></p>
-                                                                    <p></p>
+                                                                    <p class="gr7-item-header">Telegram</p>
+                                                                    <p class="gr7-item-info">@ReaspektBot</p>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -310,12 +457,12 @@ xmlns:o="urn:schemas-microsoft-com:office:office" lang="ru">
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <table cellpadding="0" cellspacing="0" align="center">
+                                                        <table class="gr7-item-table" cellpadding="0" cellspacing="0" align="center">
                                                             <tr>
-                                                                <td><img src="./images/gr7-item5.png" alt=""></td>
+                                                                <td><img src="./images/gr7-item5.png" alt="item image" width="50" height="50"></td>
                                                                 <td>
-                                                                    <p></p>
-                                                                    <p></p>
+                                                                    <p class="gr7-item-header">Skype</p>
+                                                                    <p class="gr7-item-info">sistemaim</p>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -323,12 +470,12 @@ xmlns:o="urn:schemas-microsoft-com:office:office" lang="ru">
                                                 </tr>
                                                 <tr>
                                                     <td>
-                                                        <table cellpadding="0" cellspacing="0" align="center">
+                                                        <table class="gr7-item-table" cellpadding="0" cellspacing="0" align="center" style="margin-bottom: 0;">
                                                             <tr>
-                                                                <td><img src="./images/gr7-item6.png" alt=""></td>
+                                                                <td><img src="./images/gr7-item6.png" alt="item image" width="50" height="50"></td>
                                                                 <td>
-                                                                    <p></p>
-                                                                    <p></p>
+                                                                    <p class="gr7-item-header">Сайт</p>
+                                                                    <p class="gr7-item-info">reaspekt.ru</p>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -341,12 +488,91 @@ xmlns:o="urn:schemas-microsoft-com:office:office" lang="ru">
                             </td>
                         </tr>
                         <tr>
-                            <td></td>
+                            <td>
+                                <table class="gr8-footer content" cellpadding="0" cellspacing="0" align="center" width="600" height="350" style="padding-top: 50px; padding-bottom: 45px;">
+                                    <tr>
+                                        <td align="center" valign="top" height="130">
+                                            <p style="font-family: Georgia, serif; font-size: 18px; font-weight: 400; color: #303030;">
+                                                Оставайтесь на связи — через неделю будет еще одно письмо!
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" height="25" style="padding-bottom: 12px;">
+                                            <a href="/"><img src="./images/gr8-footer-logo.svg" alt="Логотип reAspekt"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" height="20" style="padding-bottom: 12px;">
+                                            <p style="color: #303030;">
+                                                Агентство комплексного интернет-маркетинга
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" height="20">
+                                            <a href="/">
+                                                <p>
+                                                    Отписаться от рассылки
+                                                </p>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
                         </tr>
                     </table>
                 </td>
             </tr>
         </tbody>
     </table>
+    <script type="text/javascript">
+        (()=> {
+            const prev_btn = document.querySelector(".gr5-slider__prev-btn");
+            const next_btn = document.querySelector(".gr5-slider__next-btn");
+            const slides_number = document.querySelectorAll(".gr5-slider-item").length;
+            const slider_item_width = document.querySelector(".gr5-slider-item").clientWidth;
+            const slider_track = document.querySelector(".gr5-slider-track");
+            let slider_indicators_arr = Object.values(document.getElementsByClassName("gr5-slider-dot"));
+            let slide_index = 0;
+
+            prev_btn.addEventListener("click", function() {
+                if(slide_index){
+                    console.log("previous slide");
+                    slide_index--;
+                    set_slide_postition(-slider_item_width * slide_index);
+                    slider_indicators_arr[slide_index].classList.add("gr5-slider-indicators__isactive");
+                    slider_indicators_arr[slide_index + 1].classList.remove("gr5-slider-indicators__isactive");
+                    slider_indicators_arr[slide_index + 1].classList.add("gr5-slider-indicators");
+                }
+            });
+
+            next_btn.addEventListener("click", function() {
+                if(slide_index < slides_number - 1){
+                    console.log("next slide");
+                    slide_index++;
+                    set_slide_postition(-slider_item_width * slide_index);
+                    slider_indicators_arr[slide_index].classList.add("gr5-slider-indicators__isactive");
+                    slider_indicators_arr[slide_index - 1].classList.remove("gr5-slider-indicators__isactive");
+                    slider_indicators_arr[slide_index - 1].classList.add("gr5-slider-indicators");
+                }
+            }); 
+            
+            slider_indicators_arr.forEach((item, index, arr)=> {
+                item.addEventListener("click", function() {
+                    console.log("dot clicked, slider index: ", index);
+                    slider_indicators_arr[slide_index].classList.remove("gr5-slider-indicators__isactive");
+                    slider_indicators_arr[slide_index].classList.add("gr5-slider-indicators");
+                    slide_index = index;
+                    set_slide_postition(-slider_item_width * slide_index);
+                    slider_indicators_arr[slide_index].classList.add("gr5-slider-indicators__isactive");
+                });
+            });
+
+            function set_slide_postition(pos) {
+                slider_track.style.transform = `translateX(${pos}px)`;
+            }
+        })();
+    </script>
 </body>
 </html>
