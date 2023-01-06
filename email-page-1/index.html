@@ -629,7 +629,7 @@ xmlns:o="urn:schemas-microsoft-com:office:office" lang="ru">
                                         const prev_btn = document.querySelector(".gr5-slider__prev-btn");
                                         const next_btn = document.querySelector(".gr5-slider__next-btn");
                                         const slides_number = document.querySelectorAll(".gr5-slider-item").length;
-                                        const slider_item_width = document.querySelector(".gr5-slider-item").clientWidth;
+                                        let slider_item_width = document.querySelector(".gr5-slider-item").clientWidth;
                                         const slider_track = document.querySelector(".gr5-slider-track");
                                         let slider_indicators_arr = Object.values(document.getElementsByClassName("gr5-slider-dot"));
                                         let slide_index = 0;
@@ -670,6 +670,11 @@ xmlns:o="urn:schemas-microsoft-com:office:office" lang="ru">
                                         function set_slide_postition(pos) {
                                             slider_track.style.transform = `translateX(${pos}px)`;
                                         }
+
+                                        window.addEventListener("resize", function() {
+                                            slider_item_width = document.querySelector(".gr5-slider-item").clientWidth;
+                                            set_slide_postition(-slider_item_width * slide_index);
+                                        });
                                     })();
                                 </script>
                             </td>
